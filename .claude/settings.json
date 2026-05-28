@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(Get-Command node, npm, pnpm, yarn -ErrorAction SilentlyContinue)",
+      "PowerShell($env:PATH -split ';' | Where-Object { $_ -match 'node|npm' })",
+      "PowerShell(Test-Path \"C:\\\\Program Files\\\\nodejs\\\\npm.cmd\"; Test-Path \"$env:APPDATA\\\\npm\\\\npm.cmd\"; Get-ChildItem \"C:\\\\Program Files\\\\\" -Filter \"nodejs\" -ErrorAction SilentlyContinue)"
+    ]
+  }
+}

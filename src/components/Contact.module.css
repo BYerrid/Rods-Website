@@ -1,0 +1,164 @@
+.contact {
+  padding: 6rem 0;
+  background: var(--navy);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.info {
+  padding-top: 0.5rem;
+}
+
+.body {
+  color: rgba(255,255,255,0.7);
+  font-size: 0.9375rem;
+  line-height: 1.75;
+  margin-top: 1.25rem;
+  margin-bottom: 2.5rem;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.detail dt {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold-light);
+  margin-bottom: 0.2rem;
+}
+
+.detail dd {
+  color: rgba(255,255,255,0.85);
+  font-size: 0.9375rem;
+}
+
+.formWrap {
+  background: var(--white);
+  border-radius: 8px;
+  padding: 2.5rem;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.field span {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--gray-800);
+  letter-spacing: 0.02em;
+}
+
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  color: var(--gray-800);
+  background: var(--gray-100);
+  border: 1.5px solid transparent;
+  border-radius: 4px;
+  padding: 0.6875rem 0.875rem;
+  transition: border-color 0.2s, background 0.2s;
+  outline: none;
+  resize: vertical;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  background: var(--white);
+  border-color: var(--navy);
+}
+
+.submit {
+  background: var(--navy);
+  color: var(--white);
+  font-family: var(--font-sans);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  padding: 0.9rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-top: 0.5rem;
+}
+
+.submit:hover {
+  background: var(--navy-light);
+}
+
+.thanks {
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.thanksIcon {
+  font-size: 2.5rem;
+  color: var(--gold);
+  margin-bottom: 1rem;
+}
+
+.thanks h3 {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  color: var(--navy);
+  margin-bottom: 0.75rem;
+}
+
+.thanks p {
+  color: var(--gray-600);
+  font-size: 0.9375rem;
+  line-height: 1.7;
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .info {
+    order: 2;
+  }
+
+  .formWrap {
+    order: 1;
+  }
+}
+
+@media (max-width: 550px) {
+  .row {
+    grid-template-columns: 1fr;
+  }
+
+  .formWrap {
+    padding: 1.75rem;
+  }
+}

@@ -1,0 +1,131 @@
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: 1.25rem 0;
+  transition: background 0.3s, box-shadow 0.3s, padding 0.3s;
+}
+
+.scrolled {
+  background: var(--navy);
+  box-shadow: 0 2px 20px rgba(0,0,0,0.25);
+  padding: 0.75rem 0;
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.logoText {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  color: var(--white);
+  font-weight: 700;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  list-style: none;
+}
+
+.link {
+  color: rgba(255,255,255,0.85);
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.link:hover {
+  color: var(--gold-light);
+}
+
+.cta {
+  background: var(--gold);
+  color: var(--white);
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: 0.5rem 1.25rem;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+.cta:hover {
+  background: var(--gold-light);
+}
+
+.menuBtn {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.bar {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--white);
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.barOpen {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--white);
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.barHide {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--white);
+  opacity: 0;
+}
+
+.barOpen2 {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--white);
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+@media (max-width: 700px) {
+  .menuBtn {
+    display: flex;
+  }
+
+  .links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--navy);
+    flex-direction: column;
+    padding: 1.5rem;
+    gap: 1.25rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+  }
+
+  .linksOpen {
+    display: flex;
+  }
+}
