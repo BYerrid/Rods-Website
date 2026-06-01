@@ -1,0 +1,186 @@
+.section {
+  padding: 6rem 0;
+}
+
+.light { background: var(--off-white); }
+.dark  { background: var(--navy); }
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1.55fr;
+  gap: 5rem;
+  align-items: start;
+}
+
+.gridReverse { }
+
+.sidebar {
+  position: sticky;
+  top: 6rem;
+}
+
+.intro {
+  color: var(--gray-700);
+  font-size: 0.9375rem;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+
+.introLight {
+  color: rgba(255,255,255,0.68);
+}
+
+.btn {
+  display: inline-block;
+  background: var(--navy);
+  color: var(--white);
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  padding: 0.8rem 1.75rem;
+  border-radius: var(--radius);
+  transition: background 0.2s, transform 0.15s;
+}
+
+.btn:hover {
+  background: var(--navy-mid);
+  transform: translateY(-1px);
+}
+
+.btnLight {
+  background: var(--gold);
+}
+
+.btnLight:hover {
+  background: var(--gold-light);
+}
+
+.admissions {
+  margin-bottom: 2rem;
+}
+
+.admissionsLabel {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.6rem;
+}
+
+.admissionsList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.admissionsList li {
+  font-size: 0.875rem;
+  color: var(--gray-700);
+  padding-left: 1rem;
+  position: relative;
+}
+
+.admissionsList li::before {
+  content: '–';
+  position: absolute;
+  left: 0;
+  color: var(--gold);
+}
+
+.points {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.point {
+  padding: 1.75rem 0 1.75rem 1.5rem;
+  border-bottom: 1px solid var(--gray-100);
+  position: relative;
+}
+
+.pointDark {
+  border-bottom-color: rgba(255,255,255,0.08);
+}
+
+.point:first-child { padding-top: 0; }
+
+.pointAccent {
+  position: absolute;
+  left: 0;
+  top: 1.75rem;
+  width: 3px;
+  height: calc(100% - 3.5rem);
+  background: var(--gray-100);
+  border-radius: 2px;
+  transition: background 0.2s;
+}
+
+.point:first-child .pointAccent { top: 0; height: calc(100% - 1.75rem); }
+
+.point:hover .pointAccent,
+.pointAccentGold {
+  background: var(--gold) !important;
+}
+
+.pointTitle {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--navy);
+  margin-bottom: 0.6rem;
+}
+
+.pointTitleLight { color: var(--white); }
+
+.pointBody {
+  font-size: 0.875rem;
+  color: var(--gray-700);
+  line-height: 1.78;
+}
+
+.pointBodyLight { color: rgba(255,255,255,0.62); }
+
+.callout {
+  margin-top: 1.75rem;
+  background: var(--gold-pale);
+  border-left: 3px solid var(--gold);
+  padding: 1.5rem 1.75rem;
+  border-radius: 0 var(--radius) var(--radius) 0;
+}
+
+.calloutDark {
+  background: rgba(184,150,62,0.1);
+  border-left-color: var(--gold);
+}
+
+.calloutQuote {
+  font-family: var(--font-serif);
+  font-size: 0.9375rem;
+  font-style: italic;
+  color: var(--navy);
+  line-height: 1.7;
+  margin-bottom: 0.75rem;
+}
+
+.calloutDark .calloutQuote { color: rgba(255,255,255,0.85); }
+
+.calloutSource {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.calloutSourceLight { color: var(--gold-light); }
+
+@media (max-width: 900px) {
+  .grid, .gridReverse {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .sidebar { position: static; }
+}

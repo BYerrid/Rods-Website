@@ -1,0 +1,102 @@
+.section {
+  background: var(--navy-mid);
+  padding: 5rem 0;
+}
+
+.header {
+  margin-bottom: 3rem;
+}
+
+.body {
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: 4rem;
+  align-items: start;
+}
+
+.awards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1px;
+  background: rgba(255,255,255,0.08);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.award {
+  background: rgba(255,255,255,0.03);
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  transition: background 0.2s;
+}
+
+.award:hover {
+  background: rgba(184,150,62,0.1);
+}
+
+.awardOrg {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold-light);
+}
+
+.awardDetail {
+  font-size: 0.875rem;
+  color: rgba(255,255,255,0.75);
+  line-height: 1.5;
+}
+
+.pubs {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: var(--radius);
+  padding: 1.75rem;
+}
+
+.pubsTitle {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold-light);
+  margin-bottom: 1.25rem;
+}
+
+.pubsList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.pubsList li {
+  font-size: 0.875rem;
+  color: rgba(255,255,255,0.7);
+  padding-left: 1rem;
+  position: relative;
+  line-height: 1.4;
+}
+
+.pubsList li::before {
+  content: '›';
+  position: absolute;
+  left: 0;
+  color: var(--gold);
+  font-size: 1rem;
+  line-height: 1.2;
+}
+
+@media (max-width: 840px) {
+  .body {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .awards {
+    grid-template-columns: 1fr;
+  }
+}

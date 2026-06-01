@@ -1,20 +1,37 @@
 import { useState } from 'react'
 import styles from './Contact.module.css'
 
-const INITIAL = { name: '', firm: '', email: '', phone: '', caseType: '', message: '' }
+// After signing up at formspree.io, replace this with your form ID
+const FORMSPREE_ID = 'YOUR_FORM_ID'
+
+const INITIAL = { name: '', firm: '', email: '', phone: '', service: '', message: '' }
 
 export default function Contact() {
   const [form, setForm] = useState(INITIAL)
-  const [submitted, setSubmitted] = useState(false)
+  const [status, setStatus] = useState('idle') // idle | sending | success | error
 
   function handleChange(e) {
     setForm(f => ({ ...f, [e.target.name]: e.target.value }))
   }
 
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault()
-    // TODO: wire up to email service (EmailJS, Formspree, etc.)
-    setSubmitted(true)
+    setStatus('sending')
+    try {
+      const res = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify(form),
+      })
+      if (res.ok) {
+        setStatus('success')
+        setForm(INITIAL)
+      } else {
+        setStatus('error')
+      }
+    } catch {
+      setStatus('error')
+    }
   }
 
   return (
@@ -22,120 +39,104 @@ export default function Contact() {
       <div className="container">
         <div className={styles.grid}>
           <div className={styles.info}>
-            <p className="section-label">Contact</p>
-            <h2 className="section-title" style={{ color: 'var(--white)' }}>
-              Let's Find Your Expert
+            <p className="section-label" style={{ color: 'var(--gold-light)' }}>Contact</p>
+            <h2 className="section-title section-title--light">
+              Let's Discuss Your Matter
             </h2>
+            <div className="divider" />
             <p className={styles.body}>
-              Reach out with the details of your case and we'll respond within one business day.
-              All inquiries are confidential.
+              Whether you need an expert witness, an independent investigator, or legal
+              counsel, Mr. Hill responds personally to every inquiry. All communications
+              are confidential.
             </p>
             <dl className={styles.details}>
               <div className={styles.detail}>
                 <dt>Email</dt>
-                <dd>rod@[yourdomain].com</dd>
+                <dd><a href="mailto:Rhill.legal@gmail.com">Rhill.legal@gmail.com</a></dd>
               </div>
               <div className={styles.detail}>
                 <dt>Phone</dt>
-                <dd>(555) 000-0000</dd>
+                <dd><a href="tel:4438001250">443-800-1250</a></dd>
               </div>
               <div className={styles.detail}>
-                <dt>Hours</dt>
-                <dd>Mon – Fri, 9 am – 6 pm</dd>
+                <dt>Licensed In</dt>
+                <dd>Maryland &bull; D.C. &bull; U.S. District Court of Maryland</dd>
               </div>
             </dl>
           </div>
 
           <div className={styles.formWrap}>
-            {submitted ? (
+            {status === 'success' ? (
               <div className={styles.thanks}>
-                <p className={styles.thanksIcon}>✓</p>
+                <div className={styles.thanksIcon}>✓</div>
                 <h3>Message Received</h3>
-                <p>Thank you for reaching out. Rod will be in touch within one business day.</p>
+                <p>Thank you for reaching out. Mr. Hill will be in touch with you shortly.</p>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className={styles.form}>
+                <h3 className={styles.formTitle}>Send a Message</h3>
+
                 <div className={styles.row}>
                   <label className={styles.field}>
                     <span>Full Name *</span>
-                    <input
-                      type="text"
-                      name="name"
-                      value={form.name}
-                      onChange={handleChange}
-                      required
-                      placeholder="Jane Smith"
-                    />
+                    <input type="text" name="name" value={form.name} onChange={handleChange} required placeholder="Jane Smith" />
                   </label>
                   <label className={styles.field}>
-                    <span>Law Firm</span>
-                    <input
-                      type="text"
-                      name="firm"
-                      value={form.firm}
-                      onChange={handleChange}
-                      placeholder="Smith & Associates"
-                    />
+                    <span>Organization / Firm</span>
+                    <input type="text" name="firm" value={form.firm} onChange={handleChange} placeholder="Smith & Associates" />
                   </label>
                 </div>
 
                 <div className={styles.row}>
                   <label className={styles.field}>
                     <span>Email Address *</span>
-                    <input
-                      type="email"
-                      name="email"
-                      value={form.email}
-                      onChange={handleChange}
-                      required
-                      placeholder="jane@smithlaw.com"
-                    />
+                    <input type="email" name="email" value={form.email} onChange={handleChange} required placeholder="jane@smithlaw.com" />
                   </label>
                   <label className={styles.field}>
                     <span>Phone</span>
-                    <input
-                      type="tel"
-                      name="phone"
-                      value={form.phone}
-                      onChange={handleChange}
-                      placeholder="(555) 000-0000"
-                    />
+                    <input type="tel" name="phone" value={form.phone} onChange={handleChange} placeholder="(443) 000-0000" />
                   </label>
                 </div>
 
                 <label className={styles.field}>
-                  <span>Area of Expertise Needed</span>
-                  <select name="caseType" value={form.caseType} onChange={handleChange}>
-                    <option value="">Select a category...</option>
-                    <option>Medical &amp; Healthcare</option>
-                    <option>Engineering &amp; Construction</option>
-                    <option>Financial &amp; Accounting</option>
-                    <option>Product Liability</option>
-                    <option>Accident Reconstruction</option>
-                    <option>Environmental Science</option>
-                    <option>Forensic Analysis</option>
-                    <option>Mental Health</option>
-                    <option>Economics &amp; Damages</option>
-                    <option>Technology &amp; Cybersecurity</option>
+                  <span>Service Needed</span>
+                  <select name="service" value={form.service} onChange={handleChange}>
+                    <option value="">Select a service...</option>
+                    <option>Expert Witness</option>
+                    <option>Administrative / Internal Investigation</option>
+                    <option>Legal Services — Administrative Law</option>
+                    <option>Legal Services — Personal Injury</option>
+                    <option>Policy Development / Review</option>
+                    <option>Training / Speaking Engagement</option>
                     <option>Other</option>
                   </select>
                 </label>
 
                 <label className={styles.field}>
-                  <span>Brief Case Description *</span>
+                  <span>Details *</span>
                   <textarea
                     name="message"
                     value={form.message}
                     onChange={handleChange}
                     required
                     rows={5}
-                    placeholder="Describe the case, the type of expert you need, and any relevant timeline or jurisdiction details..."
+                    placeholder="Briefly describe your matter, jurisdiction, and any relevant timeline..."
                   />
                 </label>
 
-                <button type="submit" className={styles.submit}>
-                  Send Message
+                {status === 'error' && (
+                  <p className={styles.errorMsg}>
+                    Something went wrong. Please try again or email directly at{' '}
+                    <a href="mailto:Rhill.legal@gmail.com">Rhill.legal@gmail.com</a>.
+                  </p>
+                )}
+                <button type="submit" className={styles.submit} disabled={status === 'sending'}>
+                  {status === 'sending' ? 'Sending…' : 'Send Message'}
                 </button>
+
+                <p className={styles.disclaimer}>
+                  This form does not create an attorney-client relationship. All inquiries are confidential.
+                </p>
               </form>
             )}
           </div>

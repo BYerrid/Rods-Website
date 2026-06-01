@@ -2,8 +2,9 @@ import { useState, useEffect } from 'react'
 import styles from './Navbar.module.css'
 
 const links = [
-  { label: 'Home', href: '#home' },
-  { label: 'Services', href: '#services' },
+  { label: 'Expert Witness', href: '#expert-witness' },
+  { label: 'Investigations', href: '#investigations' },
+  { label: 'Legal Services', href: '#legal-services' },
   { label: 'About', href: '#about' },
   { label: 'Contact', href: '#contact' },
 ]
@@ -13,7 +14,7 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false)
 
   useEffect(() => {
-    const handler = () => setScrolled(window.scrollY > 40)
+    const handler = () => setScrolled(window.scrollY > 60)
     window.addEventListener('scroll', handler)
     return () => window.removeEventListener('scroll', handler)
   }, [])
@@ -22,17 +23,19 @@ export default function Navbar() {
     <nav className={`${styles.nav} ${scrolled ? styles.scrolled : ''}`}>
       <div className={`container ${styles.inner}`}>
         <a href="#home" className={styles.logo}>
-          <span className={styles.logoText}>Rod's Expert Witness Services</span>
+          <span className={styles.logoName}>Rodney E. Hill</span>
+          <span className={styles.logoTag}>Esquire</span>
         </a>
 
         <button
           className={styles.menuBtn}
           onClick={() => setMenuOpen(o => !o)}
           aria-label="Toggle navigation"
+          aria-expanded={menuOpen}
         >
-          <span className={menuOpen ? styles.barOpen : styles.bar} />
-          <span className={menuOpen ? styles.barHide : styles.bar} />
-          <span className={menuOpen ? styles.barOpen2 : styles.bar} />
+          <span className={`${styles.bar} ${menuOpen ? styles.bar1Open : ''}`} />
+          <span className={`${styles.bar} ${menuOpen ? styles.bar2Open : ''}`} />
+          <span className={`${styles.bar} ${menuOpen ? styles.bar3Open : ''}`} />
         </button>
 
         <ul className={`${styles.links} ${menuOpen ? styles.linksOpen : ''}`}>
@@ -45,7 +48,7 @@ export default function Navbar() {
           ))}
           <li>
             <a href="#contact" onClick={() => setMenuOpen(false)} className={styles.cta}>
-              Get Started
+              Get in Touch
             </a>
           </li>
         </ul>
