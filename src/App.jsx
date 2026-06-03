@@ -2,6 +2,7 @@ import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import Stats from './components/Stats'
 import ExpertWitness from './components/ExpertWitness'
+import ExpertPlacement from './components/ExpertPlacement'
 import Investigations from './components/Investigations'
 import LegalServices from './components/LegalServices'
 import About from './components/About'
@@ -16,6 +17,7 @@ export default function App() {
         <Hero />
         <Stats />
         <ExpertWitness />
+        <ExpertPlacement />
         <Investigations />
         <LegalServices />
         <About />
