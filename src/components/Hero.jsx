@@ -9,13 +9,14 @@ export default function Hero() {
         <div className={styles.text}>
           <p className={styles.eyebrow}>Attorney &bull; Expert Witness &bull; Investigator</p>
           <h1 className={styles.headline}>
-            Four Decades of Law Enforcement<br />
-            <em>in Service of Your Case</em>
+            A Lifetime of Criminal Justice<br />
+            <em>Excellence Working for You</em>
           </h1>
           <p className={styles.sub}>
-            Rodney E. Hill, Esquire brings a singular combination of credentials to every engagement —
-            40 years in criminal justice, a law degree, 500+ trials as a prosecutor, and command-level
-            experience at some of the nation's most complex police departments.
+            Rodney E. Hill, Esquire brings a unique and distinguished blend of expertise to every
+            client he represents and every matter entrusted to his care. His experience spans the
+            full spectrum of criminal justice — from prosecution and internal affairs to senior
+            command-level police leadership, professional education &amp; training, and legal consulting.
           </p>
           <div className={styles.actions}>
             <a href="#contact" className={styles.btnPrimary}>Discuss Your Case</a>

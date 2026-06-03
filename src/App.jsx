@@ -5,7 +5,6 @@ import ExpertWitness from './components/ExpertWitness'
 import Investigations from './components/Investigations'
 import LegalServices from './components/LegalServices'
 import About from './components/About'
-import Recognition from './components/Recognition'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 
@@ -20,8 +19,7 @@ export default function App() {
         <Investigations />
         <LegalServices />
         <About />
-        <Recognition />
-        <Contact />
+<Contact />
       </main>
       <Footer />
     </>

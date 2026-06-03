@@ -176,6 +176,47 @@
 
 .calloutSourceLight { color: var(--gold-light); }
 
+/* ── Simple area list (headings-only layout) ── */
+.areaList {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0;
+}
+
+.areaItem {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 1.25rem 0;
+  border-bottom: 1px solid var(--gray-100);
+}
+
+.areaItem:first-child { padding-top: 0; }
+
+.areaItemDark {
+  border-bottom-color: rgba(255,255,255,0.08);
+}
+
+.areaAccent {
+  flex-shrink: 0;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--gold);
+}
+
+.areaAccentGold { background: var(--gold-light); }
+
+.areaText {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--navy);
+  line-height: 1.4;
+}
+
+.areaTextLight { color: rgba(255,255,255,0.88); }
+
 @media (max-width: 900px) {
   .grid, .gridReverse {
     grid-template-columns: 1fr;

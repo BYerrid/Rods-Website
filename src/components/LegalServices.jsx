@@ -2,16 +2,16 @@ import styles from './ServiceSection.module.css'
 
 const points = [
   {
-    title: 'Administrative Law',
-    body: 'Extensive experience prosecuting and defending administrative hearings, drafting administrative policy, and navigating the intersection of government agency procedure and civil rights. Former Chief Legal Advisor to a major metropolitan police department.',
-  },
-  {
     title: 'Personal Injury',
     body: 'Deep knowledge of use-of-force standards, police liability, and governmental immunity provides a unique perspective for personal injury matters involving law enforcement conduct, civil rights violations, and institutional negligence.',
   },
   {
-    title: 'Criminal Defense & Prosecution',
-    body: 'Over 500 bench and jury trials as a prosecutor in Baltimore County. Handled felony domestic violence, homicide, and human trafficking cases. That trial experience directly informs effective defense strategy.',
+    title: 'Criminal Defense',
+    body: 'Over 500 bench and jury trials in Baltimore County Circuit Court. Handled felony domestic violence, homicide, and human trafficking cases. That trial experience directly informs effective defense strategy.',
+  },
+  {
+    title: 'Administrative Law',
+    body: 'Extensive experience prosecuting and defending administrative hearings, drafting administrative policy, and navigating the intersection of government agency procedure and civil rights. Former Chief Legal Advisor to a major metropolitan police department.',
   },
   {
     title: 'Labor & Employment',
@@ -32,9 +32,7 @@ export default function LegalServices() {
               Mr. Hill is a licensed attorney admitted to the Maryland Bar, the District
               of Columbia Bar, and the United States District Court of Maryland. His legal
               practice is grounded in 40 years of hands-on experience — not just legal
-              theory. Whether you need representation, counsel, or a second opinion from
-              someone who has been in the room when decisions were made, Mr. Hill brings
-              a depth few attorneys can match.
+              theory.
             </p>
             <div className={styles.admissions}>
               <p className={styles.admissionsLabel}>Bar Admissions</p>
@@ -55,15 +53,6 @@ export default function LegalServices() {
                 <p className={styles.pointBody}>{p.body}</p>
               </div>
             ))}
-
-            <div className={styles.callout}>
-              <p className={styles.calloutQuote}>
-                "Prosecuted felony domestic violence and homicides; litigated over 500
-                criminal trials; served as Assistant State's Attorney for Baltimore County
-                and Chief Solicitor for the Baltimore City Law Department."
-              </p>
-              <p className={styles.calloutSource}>Professional Experience Summary</p>
-            </div>
           </div>
         </div>
       </div>

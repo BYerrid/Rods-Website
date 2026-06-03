@@ -23,8 +23,8 @@ export default function Navbar() {
     <nav className={`${styles.nav} ${scrolled ? styles.scrolled : ''}`}>
       <div className={`container ${styles.inner}`}>
         <a href="#home" className={styles.logo}>
-          <span className={styles.logoName}>Rodney E. Hill</span>
-          <span className={styles.logoTag}>Esquire</span>
+          <span className={styles.logoName}>Hill Legal Consultants</span>
+          <span className={styles.logoTag}>LLC</span>
         </a>
 
         <button

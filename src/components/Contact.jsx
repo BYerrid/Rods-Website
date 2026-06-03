@@ -45,9 +45,9 @@ export default function Contact() {
             </h2>
             <div className="divider" />
             <p className={styles.body}>
-              Whether you need an expert witness, an independent investigator, or legal
-              counsel, Mr. Hill responds personally to every inquiry. All communications
-              are confidential.
+              Whether you need an expert witness, legal counsel or an independent
+              investigator, Hill Legal Consultants are ready to discuss your matter.
+              All communications are confidential.
             </p>
             <dl className={styles.details}>
               <div className={styles.detail}>

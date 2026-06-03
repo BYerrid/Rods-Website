@@ -5,8 +5,8 @@ export default function Footer() {
     <footer className={styles.footer}>
       <div className={`container ${styles.inner}`}>
         <div className={styles.brand}>
-          <p className={styles.name}>Rodney E. Hill, Esquire</p>
-          <p className={styles.tagline}>Attorney &bull; Expert Witness &bull; Investigator</p>
+          <p className={styles.name}>Hill Legal Consultants, LLC</p>
+          <p className={styles.tagline}>A Lifetime of Criminal Justice Excellence Working for You</p>
         </div>
         <div className={styles.links}>
           <a href="#expert-witness">Expert Witness</a>
@@ -16,7 +16,7 @@ export default function Footer() {
           <a href="#contact">Contact</a>
         </div>
         <div className={styles.legal}>
-          <p>© {new Date().getFullYear()} Rodney E. Hill, Esquire. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Hill Legal Consultants, LLC. All rights reserved.</p>
           <p className={styles.disclaimer}>
             This website is for informational purposes only and does not constitute legal advice
             or create an attorney-client relationship.

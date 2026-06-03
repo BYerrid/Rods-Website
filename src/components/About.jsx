@@ -1,13 +1,13 @@
 import styles from './About.module.css'
 
 const credentials = [
-  'Juris Doctor — University of Baltimore School of Law, 1996',
-  'B.A. Law Enforcement — University of Maryland, College Park, 1984',
-  'Certified Litigation Specialist — Americans for Effective Law Enforcement',
-  'Certified Excited Delirium & Agitated Chaotic Events Instructor',
-  'FBI Certificate of Recognition — Gun Trace Task Force Investigation, 2018',
+  'Juris Doctor — University of Baltimore School of Law',
+  'B.A. Law Enforcement — University of Maryland, College Park',
+  'Certified Litigation Specialist',
+  'Provides professional trainings and seminars throughout the U.S.',
   'Assistant Professor of Law — Stevenson University (current)',
   'News Contributor — WBFF-FOX 45 Baltimore (current)',
+  'Numerous other Certifications and Recognitions',
 ]
 
 export default function About() {
@@ -44,19 +44,20 @@ export default function About() {
               authoritative perspective few practitioners can offer.
             </p>
             <p className={styles.body}>
-              Mr. Hill served as Chief of the Office of Professional Responsibility for
-              the Baltimore City Police Department — one of the nation's largest and most
-              scrutinized police forces — where he commanded 90 personnel and oversaw
-              hundreds of internal investigations annually, including the Freddie Gray
-              in-custody death investigation and the FBI Gun Trace Task Force corruption
-              probe. He later served as Chief Legal Advisor to the Chief of Police for
-              the Baltimore County Police Department.
+              Mr. Hill served as Chief of the Internal Affairs Division for the Baltimore
+              City Police Department — one of the nation's largest and most scrutinized
+              police forces — where he commanded 90 personnel and oversaw hundreds of
+              internal investigations annually, including the Freddie Gray in-custody death
+              investigation and the FBI Gun Trace Task Force corruption probe. He later
+              served as Chief Legal Advisor to the Chief of Police for the Baltimore County
+              Police Department.
             </p>
             <p className={styles.body}>
-              As a prosecutor, Mr. Hill litigated over 500 criminal trials in Baltimore
-              County Circuit Court. He has taught at the Federal Law Enforcement Training
-              Centers (FLETC), multiple universities, and continues to serve as an
-              Adjunct Professor at Stevenson University and a news contributor for
+              As a prosecutor, Mr. Hill litigated hundreds of criminal trials in Baltimore
+              County Circuit and District Courts. He has taught for the Federal Law
+              Enforcement Training Centers (FLETC), has taught at numerous police seminars
+              and conferences, multiple universities, and currently serves as an Assistant
+              Law Professor at Stevenson University, and a news contributor for
               WBFF-FOX 45 in Baltimore.
             </p>
 
