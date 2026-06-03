@@ -9,8 +9,8 @@ export default function Hero() {
         <div className={styles.text}>
           <p className={styles.eyebrow}>Attorney &bull; Expert Witness &bull; Investigator</p>
           <h1 className={styles.headline}>
-            A Lifetime of Criminal Justice<br />
-            <em>Excellence Working for You</em>
+            A Lifetime of Criminal Justice Excellence<br />
+            <em>Working for You</em>
           </h1>
           <p className={styles.sub}>
             Rodney E. Hill, Esquire brings a unique and distinguished blend of expertise to every
