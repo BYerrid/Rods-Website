@@ -29,16 +29,15 @@ export default function LegalServices() {
             <h2 className="section-title">Legal Services</h2>
             <div className="divider" />
             <p className={styles.intro}>
-              Mr. Hill is a licensed attorney admitted to the Maryland Bar, the District
-              of Columbia Bar, and the United States District Court of Maryland. His legal
-              practice is grounded in 40 years of hands-on experience — not just legal
-              theory.
+              Mr. Hill is a seasoned litigator and licensed attorney admitted to the
+              Maryland Bar and the United States District Court of Maryland. His practice
+              is built on 40 years of hands-on experience navigating the criminal justice
+              system — not just legal theory.
             </p>
             <div className={styles.admissions}>
               <p className={styles.admissionsLabel}>Bar Admissions</p>
               <ul className={styles.admissionsList}>
                 <li>Maryland State Bar</li>
-                <li>District of Columbia Bar</li>
                 <li>U.S. District Court of Maryland</li>
               </ul>
             </div>

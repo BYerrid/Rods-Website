@@ -2,9 +2,8 @@ import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import Stats from './components/Stats'
 import ExpertWitness from './components/ExpertWitness'
-import ExpertPlacement from './components/ExpertPlacement'
-import Investigations from './components/Investigations'
 import LegalServices from './components/LegalServices'
+import Investigations from './components/Investigations'
 import About from './components/About'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
@@ -17,11 +16,10 @@ export default function App() {
         <Hero />
         <Stats />
         <ExpertWitness />
-        <ExpertPlacement />
-        <Investigations />
         <LegalServices />
+        <Investigations />
         <About />
-<Contact />
+        <Contact />
       </main>
       <Footer />
     </>

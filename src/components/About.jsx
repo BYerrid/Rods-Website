@@ -38,10 +38,10 @@ export default function About() {
 
             <p className={styles.body}>
               Rodney E. Hill, Esquire is an attorney, policing expert, and former senior
-              law enforcement commander with over 40 years of experience in the criminal
-              justice field. His career is defined by a rare combination: he has served
-              as both a prosecutor and a police command officer, giving him an
-              authoritative perspective few practitioners can offer.
+              law enforcement commander with over four decades of experience in the criminal
+              justice field. His career is defined by a unique combination: he has served
+              as both a prosecutor and a police commander, giving him a perspective few
+              practitioners can offer.
             </p>
             <p className={styles.body}>
               Mr. Hill served as Chief of the Internal Affairs Division for the Baltimore

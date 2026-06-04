@@ -4,7 +4,8 @@
       "PowerShell(Get-Command node, npm, pnpm, yarn -ErrorAction SilentlyContinue)",
       "PowerShell($env:PATH -split ';' | Where-Object { $_ -match 'node|npm' })",
       "PowerShell(Test-Path \"C:\\\\Program Files\\\\nodejs\\\\npm.cmd\"; Test-Path \"$env:APPDATA\\\\npm\\\\npm.cmd\"; Get-ChildItem \"C:\\\\Program Files\\\\\" -Filter \"nodejs\" -ErrorAction SilentlyContinue)",
-      "PowerShell(ipconfig /flushdns 2>&1)"
+      "PowerShell(ipconfig /flushdns 2>&1)",
+      "PowerShell($env:PATH = [System.Environment]::GetEnvironmentVariable\\(\"PATH\", \"Machine\"\\) + \";\" + [System.Environment]::GetEnvironmentVariable\\(\"PATH\", \"User\"\\); cd \"c:\\\\Users\\\\byerr\\\\OneDrive\\\\Documents\\\\GitHub\\\\Rod's Website\"; npm run build 2>&1)"
     ]
   }
 }

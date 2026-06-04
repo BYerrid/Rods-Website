@@ -7,7 +7,7 @@ export default function Hero() {
       <div className={`container ${styles.content}`}>
 
         <div className={styles.text}>
-          <p className={styles.eyebrow}>Attorney &bull; Expert Witness &bull; Investigator</p>
+          <p className={styles.eyebrow}>Attorney &bull; Expert Witness &bull; Investigations</p>
           <h1 className={styles.headline}>
             A Lifetime of Criminal Justice Excellence<br />
             <em>Working for You</em>

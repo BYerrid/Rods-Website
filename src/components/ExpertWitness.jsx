@@ -1,11 +1,12 @@
 import styles from './ServiceSection.module.css'
 
 const areas = [
-  'Police & Corrections Misconduct & Use-of-Force Investigations',
+  'Police & Corrections Misconduct Investigations',
+  'Use-of-Force Investigations',
+  'Police Practices and Procedures',
+  'Police Supervisor & Management Practices and Procedures',
   'Constitutional Policing',
   'Investigations, Discipline & Use-of-Force Policy Development and Review',
-  'Police Operational Practices and Procedures',
-  'Police Supervisory & Management Practices and Procedures',
 ]
 
 export default function ExpertWitness() {

@@ -4,7 +4,7 @@ const stats = [
   { value: '40+', label: 'Years in Criminal Justice' },
   { value: '500+', label: 'Criminal Trials' },
   { value: '700+', label: 'Internal Cases / Year' },
-  { value: '3',    label: 'Bar Admissions' },
+  { value: '2',    label: 'Bar Admissions' },
 ]
 
 export default function Stats() {

@@ -60,7 +60,7 @@ export default function Contact() {
               </div>
               <div className={styles.detail}>
                 <dt>Licensed In</dt>
-                <dd>Maryland &bull; D.C. &bull; U.S. District Court of Maryland</dd>
+                <dd>Maryland &bull; U.S. District Court of Maryland</dd>
               </div>
             </dl>
           </div>
