@@ -19,8 +19,8 @@ export default function ExpertWitness() {
             <h2 className="section-title">Expert Witness</h2>
             <div className="divider" />
             <p className={styles.intro}>
-              Rodney E. Hill, Esquire will provide expert witness testimony and consulting
-              in the following areas:
+              Rodney E. Hill, Esquire is a qualified expert witness. He will provide
+              expert witness testimony and consulting in the following areas:
             </p>
             <a href="#contact" className={styles.btn}>Retain Mr. Hill</a>
           </div>
